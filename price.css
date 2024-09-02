@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --Font-size: 16px;
+    --Font-size-small: 14px;
+    --Family: 'Karla', sans-serif;
+    --Weight-normal: 400;
+    --Weight-bold: 700;
+}
+
+body {
+    font-family: var(--Family);
+    font-weight: var(--Weight-normal);
+    font-size: var(--Font-size);
+    background-color: var(--Light-Gray);
+}
+
+.top,
+.left,
+.right{
+    padding: 1vh 3vw;
+}
+
+.top {
+    background-color: white;
+    border-radius: 1vw 1vw 0 0;
+}
+
+.left {
+    background-color: var(--Cyan);
+    border-radius: 0 0 0 1vw;
+}
+
+.right {
+    background-color: hsl(179.48deg 47.15% 51.76% / 80%);
+    width: 100%;
+    border-radius: 0 0 1vw 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.top h1{
+    color: var(--Cyan);
+}
+
+.top h3{
+    color: var(--Bright-Yellow);
+}
+
+.top p {
+    color: var(--Grayish-Blue);
+    width: 40vw;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: var(--Light-Gray);
+    width: 100%;
+    padding: 0 26.5vw;
+}
+
+.right p {
+    width: 14vw;
+}
+
+strong {
+    color: white;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+h4 {
+    font-size: var(--Font-size-small);
+}
+
+button {
+    width: 18vw;
+    height: 3vw;
+    background-color: var(--Bright-Yellow);
+    border: 1px solid var(--Bright-Yellow);
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: var(--Cyan);
+    color: var(--Light-Gray);
+    border-color: #ddd; 
+}
+
+@media screen and (max-width:860px) {
+    
+    body {
+        /* width: 100%; */
+        font-size: 10px;
+    }
+
+    .top {
+        width: 58%;
+    }
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 20.5vw;
+    }
+
+    .left {
+        border-radius: 0 0 0 0vw;
+    }
+
+    .right {
+        background-color: hsl(179.48deg 47.15% 51.76% / 80%);
+        width: 100%;
+        border-radius: 0vw 0vw 1vw 1vw;
+    }
+
+    button {
+        width: 35vw;
+        height: 5vw;
+    }
+
+    .right p {
+        width: 55%;
+    }
+    
+}
